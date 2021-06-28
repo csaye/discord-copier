@@ -17,3 +17,11 @@ while True:
     pyautogui.press('down')
     pyautogui.hotkey('command', 'c')
     tag = pyperclip.paste()
+    # if message
+    if tag.startswith('<div class="message'):
+        pyautogui.click(destination_pos)
+        pyautogui.hotkey('command', 'v')
+        pyautogui.press('enter')
+        pyautogui.click(source_pos)
+    # if not message, return up
+    else: pyautogui.press('up')
