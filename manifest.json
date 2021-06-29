@@ -1,0 +1,6 @@
+{
+  "name": "Discord Copier",
+  "description": "Copies received messages from one discord server to another.",
+  "version": "1.0",
+  "manifest_version": 3
+}
