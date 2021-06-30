@@ -1,18 +1,18 @@
-import discord
+from discord.ext import commands
 
 # read token from file
 tokenfile = open('./token.txt')
 token = tokenfile.read()
 tokenfile.close()
 
-client = discord.Client()
+bot = commands.Bot(command_prefix='!')
 
-@client.event
+@bot.event
 async def on_ready():
-    print(f'${client.user} has connected to Discord')
-    for guild in client.guilds:
-        if not guild.channels: continue # if no valid channel, continue
-        channel = guild.channels[1] # get first channel
-        await channel.send('hello world')
+    print(f'${bot.user} has connected to Discord')
 
-client.run(token)
+@bot.command(name='stream')
+async def stream(ctx):
+    await ctx.send('streaming messages from listener')
+
+bot.run(token)
