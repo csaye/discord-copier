@@ -17,6 +17,15 @@ startButton.addEventListener("click", async () => {
 
 // will be executed after copy starts
 function startCopy() {
+  // will be called when messages change
+  function onMutation(mutations) {
+    for (const mutation of mutations) {
+      for (const addedNode of mutation.addedNodes) {
+        console.log(addedNode.textContent);
+      }
+    }
+  }
+
   // get messages scroller and set up mutation observer
   const scrollerInner = document.querySelector("div[data-list-id='chat-messages']");
   new MutationObserver(onMutation).observe(scrollerInner, { childList: true });
