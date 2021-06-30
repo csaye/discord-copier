@@ -16,4 +16,9 @@ startButton.addEventListener("click", async () => {
 });
 
 // will be executed after copy starts
-function startCopy() {}
+function startCopy() {
+  // get messages scroller and set up mutation observer
+  const scrollerInner = document.querySelector("div[data-list-id='chat-messages']");
+  new MutationObserver(onMutation).observe(scrollerInner, { childList: true });
+  alert('Mutation observer started.');
+}
