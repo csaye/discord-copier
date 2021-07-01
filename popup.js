@@ -17,11 +17,13 @@ startButton.addEventListener("click", async () => {
 
 // will be executed after copy starts
 function startCopy() {
+  const connection = new WebSocket("ws://localhost:9999");
+
   // will be called when messages change
   function onMutation(mutations) {
     for (const mutation of mutations) {
       for (const addedNode of mutation.addedNodes) {
-        console.log(addedNode.textContent);
+        connection.send(addedNode.textContent);
       }
     }
   }
