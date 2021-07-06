@@ -28,9 +28,20 @@ async def check_message():
 @bot.event
 async def on_ready():
     print(f'${bot.user} has connected to Discord')
+    while True:
+        await asyncio.sleep(0.5)
+        await check_message()
 
-@bot.command(name='stream')
+@bot.command(name='start')
 async def stream(ctx):
+    global context
+    context = ctx
     await ctx.send('streaming messages from listener')
+
+@bot.command(name='stop')
+async def stream(ctx):
+    global context
+    context = None
+    await ctx.send('stopped streaming messages')
 
 bot.run(token)
