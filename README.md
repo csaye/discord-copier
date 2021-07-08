@@ -13,12 +13,12 @@ To exit the environment, run `deactivate`.
 ## Installation
 
 1) Download the `discord-copier` directory.
-2) Invite the Discord Copier bot to you desired server using [this link](`https://discord.com/oauth2/authorize?client_id=859870778270416917&permissions=2048&scope=bot`). The bot will send messages to the first channel with the name `general`.
+2) Invite the Discord Copier bot to you desired server using [this link](https://discord.com/oauth2/authorize?client_id=859870778270416917&permissions=2048&scope=bot). The bot will send messages to the first channel with the name `general`.
 3) Make sure [Google Chrome](https://www.google.com/chrome) and [Python](https://www.python.org/downloads) are installed on your machine.
 
 **Loading the extension**
 
-1) Open the Extension Management page by navigating to `chrome://extensions` on Google Chrome.
+1) Open the Extension Management page by navigating to `chrome://extensions` in the Google Chrome browser.
 2) Enable Developer mode by clicking the toggle switch next to **Developer Mode**.
 3) Click the **Load unpacked** button and select the `discord-copier` directory.
 
@@ -29,4 +29,4 @@ To exit the environment, run `deactivate`.
 1) Navigate to the `discord-copier` directory in the command line.
 2) Install dependencies with `pip install websockets` or by following the virtualenv instructions above.
 3) Start the socket server and the Discord bot by running `python server.py`.
-4) Activate the extension on a Chrome tab with your source server. Press the `Start` button to begin listening for messages.
+4) Activate the extension on a Chrome tab with your source server. Press the **Start** button to begin listening for messages.
