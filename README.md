@@ -10,10 +10,23 @@ To run, activate the environment: `source env/bin/activate`. Then run `pip insta
 
 To exit the environment, run `deactivate`.
 
-## About
+## Installation
 
-Discord Copier uses Python to set up a socket server, a chrome extension to pull chat messages from a server, and a Discord bot to send those messages into another server.
+1) Download the `discord-copier` directory.
+2) Invite the Discord Copier bot to you desired server using [this link](`https://discord.com/oauth2/authorize?client_id=859870778270416917&permissions=2048&scope=bot`). The bot will send messages to the first channel with the name `general`.
+3) Make sure [Google Chrome](https://www.google.com/chrome) and [Python](https://www.python.org/downloads) are installed on your machine.
 
-## Running
+**Loading the extension**
 
-Start the socket server and the Discord bot with `python server.py` and `python bot.py`. Enable the listener in the server you want to pull messages from with the chrome extension. Start and stop listening in your target server with `!start` and `!stop`.
+1) Open the Extension Management page by navigating to `chrome://extensions` on Google Chrome.
+2) Enable Developer mode by clicking the toggle switch next to **Developer Mode**.
+3) Click the **Load unpacked** button and select the `discord-copier` directory.
+
+![](https://user-images.githubusercontent.com/27871609/124992129-6fc48b80-dff7-11eb-9a45-a361aaec333a.png)
+
+**Running**
+
+1) Navigate to the `discord-copier` directory in the command line.
+2) Install dependencies with `pip install websockets` or by following the virtualenv instructions above.
+3) Start the socket server and the Discord bot by running `python server.py`.
+4) Activate the extension on a Chrome tab with your source server. Press the `Start` button to begin listening for messages.
